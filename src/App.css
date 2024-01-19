@@ -1,0 +1,149 @@
+*{
+  list-style-type: none;
+}
+
+#root {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.update-box {
+  display: flex;
+}
+
+.update-title {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 0.5em;
+  margin-left: 30px;
+}
+.update-btn {
+  width: 5em;
+  height: 5em;
+  border: 3px solid #000;
+  border-radius: 80%;
+  margin-left: 2em;
+  margin-top: 1em;
+  background-color: inherit;
+  box-shadow: lightslategray;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.update-btn:hover {
+  animation: rotate 1s linear infinite;
+}
+
+.update {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border: 4px solid transparent;
+  border-bottom-color: green;
+  border-top-color: green;
+  border-radius: 70%;
+  position: relative;
+}
+
+.update::after,
+.update::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-top-color: green;
+}
+
+.update::before {
+  top: 0px;
+  left: 23px;
+  transform: rotate(-45deg);
+}
+
+.update::after {
+  top: 15px;
+  left: -8px;
+  transform: rotate(135deg);
+}
+
+.notes-list {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+}
+
+.item {
+  padding: 1em;
+  border: 2px solid #000;
+  width: 500px;
+  height: 200px;
+  position: relative;
+  box-shadow: lightslategray;
+  word-wrap: break-word;
+}
+
+.list-item-btn {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: inherit;
+  font-size: 2rem;
+  color: red;
+  top: -32px;
+  right: -32px;
+  background-color: #fff;
+}
+
+.list-item-btn:hover {
+  color: white;
+  background-color: red;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.list-item-content {
+  height: 190px;
+  overflow-y: auto;
+}
+
+.add-form.form {
+  margin-top: 2em;
+  position: relative;
+}
+
+.add-form-textarea {
+  border: 2px solid #000;
+  width: 1000px;
+  height: 100px;
+  font-size: 1em;
+}
+
+.add-form-btn {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid #000;
+  border-radius: 50%;
+  left: 0.5em;
+  cursor: pointer;
+  font-size: 3rem;
+  color: blue;
+}
+
+.add-form-btn:hover {
+  background-color: blue;
+  color: white;
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
